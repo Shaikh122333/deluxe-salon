@@ -1,0 +1,847 @@
+/* =====================================================
+   RETRO SALOON — STYLE.CSS
+   ===================================================== */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11100e;
+    color: #e9dfcc;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+
+
+}
+
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+    --bg: #11100e;
+    --bg-light: #191714;
+    --cream: #e9dfcc;
+    --muted: #a99f8d;
+    --gold: #b89b62;
+    --border: rgba(233, 223, 204, 0.15);
+
+    --serif: "Cormorant Garamond", serif;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    width: 100%;
+    padding: 28px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    line-height: 0.8;
+}
+
+.logo span {
+    display: block;
+
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+
+    margin-bottom: 6px;
+}
+
+.logo h1,
+.logo h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+/* ---------- SUPPORT BUTTON ---------- */
+
+.support-btn {
+    background: transparent;
+
+    border: 1px solid var(--border);
+    border-radius: 50px;
+
+    color: var(--cream);
+
+    padding: 10px 20px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.support-btn:hover {
+    background: var(--cream);
+    color: var(--bg);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 85vh;
+
+    padding: 80px 6%;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+  background: url('salman.jpeg') center/cover no-repeat;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+
+}
+
+
+/* ---------- HERO CONTENT ---------- */
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: var(--gold);
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+.hero-content h2 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.description {
+    max-width: 430px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+.status {
+    display: inline-block;
+
+    border: 1px solid var(--border);
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+   ===================================================== */
+
+.saloon-image {
+    top: 80px;
+    margin-left: 200px;
+    width: 50%;
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    position: relative;
+
+    background: #1c1916;
+}
+
+.saloon-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter: saturate(0.75) contrast(1.05);
+
+    transition: transform 0.8s ease;
+}
+
+.saloon-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Dark overlay */
+
+.saloon-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(17, 16, 14, 0.45),
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   MUSIC SECTION
+   ===================================================== */
+
+.music-section {
+    padding: 130px 6%;
+
+    background: var(--bg-light);
+}
+
+
+/* ---------- SECTION HEADING ---------- */
+
+.section-heading {
+    max-width: 700px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+
+    font-style: italic;
+}
+
+
+/* ---------- SPOTIFY ---------- */
+
+.spotify-player {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background: #181818;
+}
+
+.spotify-player iframe {
+    width: 100%;
+
+    height: 352px;
+
+    display: block;
+
+    border: none;
+}
+
+
+/* =====================================================
+   MEMORY SECTION
+   ===================================================== */
+
+.memory-section {
+    padding: 130px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* ---------- MEMORY IMAGE ---------- */
+
+.memory-image {
+    width: 100%;
+    height: 550px;
+
+    overflow: hidden;
+
+    background: #1c1916;
+}
+
+.memory-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    filter: grayscale(15%) sepia(10%);
+}
+
+
+/* ---------- MEMORY CONTENT ---------- */
+
+.memory-content {
+    max-width: 550px;
+}
+
+.memory-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 5vw, 72px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+.memory-content h2 span {
+    color: var(--gold);
+
+    font-style: italic;
+}
+
+.memory-content p:not(.small-title) {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+
+    max-width: 500px;
+}
+
+
+/* =====================================================
+   QUOTE
+   ===================================================== */
+
+.quote-section {
+    padding: 140px 6%;
+
+    background: #0d0c0b;
+
+    text-align: center;
+
+    background: url('salman.jpeg') center/cover no-repeat;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.quote-box {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.quote-mark {
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 100px;
+
+    color: var(--gold);
+
+    line-height: 0.5;
+}
+
+.quote-box h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(38px, 5vw, 70px);
+
+    line-height: 1;
+
+    font-weight: 500;
+}
+
+.quote-box h2 span {
+    color: var(--gold);
+
+    font-style: italic;
+}
+
+.quote-box p {
+    margin-top: 30px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   FEATURES
+   ===================================================== */
+
+.features {
+    padding: 120px 6%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 45px 35px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition: 0.35s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(184, 155, 98, 0.4);
+}
+
+.feature-icon {
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-family: var(--serif);
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+
+.faq-section {
+    padding: 130px 6%;
+
+    background: var(--bg-light);
+}
+
+.faq {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.faq details {
+    border-bottom: 1px solid var(--border);
+
+    padding: 25px 0;
+}
+
+.faq summary {
+    cursor: pointer;
+
+    list-style: none;
+
+    font-family: var(--serif);
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    position: relative;
+
+    padding-right: 40px;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 0;
+
+    color: var(--gold);
+
+    font-size: 25px;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    max-width: 700px;
+
+    padding-top: 15px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+    padding: 70px 6% 35px;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+    
+}
+
+.footer .logo {
+    margin-bottom: 25px;
+}
+
+.footer p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.footer .copyright {
+    margin-top: 30px;
+
+    font-size: 11px;
+
+    opacity: 0.5;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .saloon-image {
+        height: 500px;
+    }
+
+    .memory-section {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .memory-image {
+        height: 500px;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header {
+        padding: 22px 5%;
+    }
+
+    .logo span {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+
+        letter-spacing: 3px;
+    }
+
+    .support-btn {
+        padding: 8px 14px;
+
+        font-size: 11px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 5% 80px;
+
+        gap: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(50px, 15vw, 75px);
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .saloon-image {
+        height: 420px;
+    }
+
+
+    /* Music */
+
+    .music-section {
+        padding: 90px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 52px;
+    }
+
+    .spotify-player iframe {
+        height: 352px;
+    }
+
+
+    /* Memory */
+
+    .memory-section {
+        padding: 90px 5%;
+
+        gap: 40px;
+    }
+
+    .memory-image {
+        height: 420px;
+    }
+
+    .memory-content h2 {
+        font-size: 50px;
+    }
+
+
+    /* Quote */
+
+    .quote-section {
+        padding: 100px 5%;
+    }
+
+    .quote-mark {
+        font-size: 80px;
+    }
+
+    .quote-box h2 {
+        font-size: 42px;
+    }
+
+
+    /* Features */
+
+    .features {
+        padding: 80px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 35px 25px;
+    }
+
+
+    /* FAQ */
+
+    .faq-section {
+        padding: 90px 5%;
+    }
+
+    .faq summary {
+        font-size: 23px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 60px 5% 30px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-content h2 {
+        font-size: 48px;
+    }
+
+    .saloon-image {
+        height: 360px;
+    }
+
+    .memory-image {
+        height: 360px;
+    }
+
+    .section-heading h2 {
+        font-size: 45px;
+    }
+
+    .memory-content h2 {
+        font-size: 44px;
+    }
+
+    .quote-box h2 {
+        font-size: 36px;
+    }
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
+}
+
+.whatsapp-btn {
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+
+
+}
